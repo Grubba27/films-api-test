@@ -5,6 +5,7 @@ import GoBack from "../../public/components/GoBack";
 import FilmSynopsis from "../../public/components/FilmSynopsis";
 import GenericData from "../../public/components/GenericData";
 import GenericTimeData from "../../public/components/GenericTimeData";
+import FilmBanner from "../../public/components/FilmBanner";
 
 export async function getServerSideProps({query}) {
   // get id of the url || pegar o nome do filme via url
@@ -53,16 +54,7 @@ export default function NomeDoFilme({filmResult}) {
             </title>
             <main>
               <GoBack message={'Not what you wanted ?'} url={'/filmes'}/>
-              <h2>
-                {filmResult.Title}
-                {
-                  // usando img pois não sei onde todas as images estão hospedadas
-                  // se soubesse onde está o dominio de todas elas.
-                  // eu usaria o Image do /next e passaria a url no next.config.js
-                }
-              </h2>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img alt={`${filmResult.Title} poster`} src={filmResult.Poster}/>
+              <FilmBanner title={filmResult.Title} posterUrl={filmResult.Poster} />
               <GenericData genericDataName={'Genres'} genericData={filmResult.Genre} />
               <FilmSynopsis Title={filmResult.Title} Plot={filmResult.Plot} />
               <GenericTimeData genericDataName={'Year of launch'} genericData={filmResult.Year} />
