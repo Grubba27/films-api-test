@@ -1,4 +1,4 @@
-import style from "../../styles/Movie.module.css";
+import {CheckValidator} from "../../styles/MovieStyles";
 
 export default function FormValidator(props) {
 
@@ -6,9 +6,9 @@ export default function FormValidator(props) {
     <>
       {
         props.isValid ? false :
-          <span className={style.validityCheck}>
+          <CheckValidator >
               Please, type a value to search
-          </span>
+          </CheckValidator>
       }
     </>
 

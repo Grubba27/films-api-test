@@ -2,15 +2,15 @@ import GoBack from "./GoBack";
 import FilmBanner from "./FilmBanner";
 import GenericData from "./GenericData";
 import FilmSynopsis from "./FilmSynopsis";
-import style from "../../styles/Movie.module.css"
 import FilmSpec from "./FilmSpec";
+import {MainMovieSectionStyle} from "../../styles/MovieStyles";
 
 
 
 export default function MainMovieSection({filmResult, siteRatings}) {
 
   return(
-    <main className={style.mainMovieSection}>
+    <MainMovieSectionStyle>
       <GoBack message={'Not what you wanted ?'} url={'/filmes'}/>
       <FilmBanner title={filmResult.Title} posterUrl={filmResult.Poster}>
         <GenericData genericDataName={'Genres'} genericData={filmResult.Genre} />
@@ -18,6 +18,6 @@ export default function MainMovieSection({filmResult, siteRatings}) {
         <GenericData genericDataName={'Actors'} genericData={filmResult.Actors} />
         <FilmSpec filmResult={filmResult} siteRatings={siteRatings} />
       </FilmBanner>
-    </main>
+    </MainMovieSectionStyle>
   )
 }

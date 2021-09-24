@@ -1,17 +1,17 @@
 import GenericTimeData from "./GenericTimeData";
 import RatingsSection from "./RatingsSection";
-import style from "../../styles/Movie.module.css"
+import {FlexStartColumnSection, SpecSection} from "../../styles/MovieStyles";
 
 export default function FilmSpec({filmResult, siteRatings}){
 
   return(
-    <div className={style.specSection}>
-      <div className={style.timeSpecSection}>
+    <SpecSection>
+      <FlexStartColumnSection>
         <GenericTimeData genericDataName={'Year of launch'} genericData={filmResult.Year} />
         <GenericTimeData genericDataName={'Runtime'} genericData={filmResult.Runtime} />
-      </div>
+      </FlexStartColumnSection>
 
       <RatingsSection imdb={filmResult.imdbRating} siteRatings={siteRatings} />
-    </div>
+    </SpecSection>
   )
 }

@@ -1,15 +1,11 @@
 import {useRouter} from "next/router";
 import {useState} from "react";
-import style from "../../styles/Movie.module.css"
 import FormValidator from "../../public/components/FormValidator";
-import {SimpleTitle} from "../index";
-import styled from "@emotion/styled";
+
+import {CenteredColumnSection, GoButton} from "../../styles/MovieStyles";
 
 
-const GoButton = styled.button`
-  margin-top: 5px;
-  border-radius: 15px;
-`;
+
 
 export default function Filmes() {
 
@@ -33,11 +29,11 @@ export default function Filmes() {
   }
   return(
     <>
-      <SimpleTitle>
+      <title>
         Movie Searcher
-      </SimpleTitle>
+      </title>
 
-      <div className={style.searchSection}>
+      <CenteredColumnSection>
         <h1>
           Search a movie :)
         </h1>
@@ -53,7 +49,7 @@ export default function Filmes() {
           </GoButton>
 
         <FormValidator isValid={isValid} />
-      </div>
+      </CenteredColumnSection>
 
     </>
 

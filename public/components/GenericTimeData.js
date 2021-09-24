@@ -1,9 +1,11 @@
+import {CustomP} from "../../styles/MovieStyles";
+
 export default function GenericTimeData(props){
 
   return(
-    <p> {props.genericDataName}:
+    <CustomP> {props.genericDataName}:
       <time> {props.genericData} </time>
-    </p>
+    </CustomP>
 
   )
 }

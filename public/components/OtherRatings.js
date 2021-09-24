@@ -1,5 +1,6 @@
-import style from "../../styles/Movie.module.css"
+
 import {useEffect, useState} from "react";
+import {CustomUl} from "../../styles/MovieStyles";
 
 export default function OtherRatings(props) {
   const [ratingsList, setRatingsList] = useState([]);
@@ -9,7 +10,7 @@ export default function OtherRatings(props) {
     }
   }, [props.ratings])
   return (
-    <ul className={style.otherSitesList}>
+    <CustomUl>
       {
         ratingsList.map((rating, index) => {
           return (
@@ -19,6 +20,6 @@ export default function OtherRatings(props) {
           );
         })
       }
-    </ul>
+    </CustomUl>
   )
 }

@@ -1,5 +1,5 @@
 import {useRouter} from "next/router";
-import style from "../../styles/Movie.module.css"
+import {CenteredColumnSection, GoButton} from "../../styles/MovieStyles";
 
 
 export default function GoBack(props) {
@@ -10,15 +10,15 @@ export default function GoBack(props) {
   }
 
   return (
-    <div className={style.goButtonSection}>
+    <CenteredColumnSection>
             <span>
               {props.message}
             </span>
       <br/>
-      <button className={style.goButton} onClick={() => goBack(props.url)}>
+      <GoButton onClick={() => goBack(props.url)}>
         Click here to go to the search page
-      </button>
+      </GoButton>
 
-    </div>
+    </CenteredColumnSection>
   )
 }

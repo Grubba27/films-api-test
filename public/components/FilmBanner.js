@@ -1,11 +1,12 @@
-import style from "../../styles/Movie.module.css"
+
+import {BannerMainSection, CenteredColumnSection} from "../../styles/MovieStyles";
 
 export default function FilmBanner(props){
 
   return(
-    <div className={style.bannerMainSection}>
+    <BannerMainSection>
 
-      <div className={style.bannerPosterSection} >
+      <CenteredColumnSection>
         <h2>
           {props.title}
         </h2>
@@ -16,11 +17,11 @@ export default function FilmBanner(props){
         }
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img alt={`${props.title} poster`} src={props.posterUrl}/>
-      </div>
-      <div className={style.bannerChildrenSection}>
+      </CenteredColumnSection>
+      <CenteredColumnSection style={{padding: "0 1rem"}}>
       {props.children}
-      </div>
+      </CenteredColumnSection>
 
-    </div>
+    </BannerMainSection>
   )
 }
