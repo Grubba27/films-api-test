@@ -4,11 +4,14 @@ import GenericData from "./GenericData";
 import FilmSynopsis from "./FilmSynopsis";
 import GenericTimeData from "./GenericTimeData";
 import RatingsSection from "./RatingsSection";
+import style from "../../styles/Movie.module.css"
+
+
 
 export default function MainMovieSection({filmResult, siteRatings}) {
 
   return(
-    <main>
+    <main className={style.mainMovieSection}>
       <GoBack message={'Not what you wanted ?'} url={'/filmes'}/>
       <FilmBanner title={filmResult.Title} posterUrl={filmResult.Poster} />
       <GenericData genericDataName={'Genres'} genericData={filmResult.Genre} />
