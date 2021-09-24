@@ -10,7 +10,7 @@ export default function GoBack(props) {
   }
 
   return (
-    <div>
+    <div className={style.goButtonSection}>
             <span>
               {props.message}
             </span>

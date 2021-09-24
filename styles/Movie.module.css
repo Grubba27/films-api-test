@@ -16,6 +16,12 @@
     text-align: center;
     padding: 0 5%;
 }
+.goButtonSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .goButton{
     margin-top: 5px;
     border-radius: 15px;
