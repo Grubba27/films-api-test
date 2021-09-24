@@ -1,4 +1,6 @@
 import {useRouter} from "next/router";
+import style from "../../styles/Movie.module.css"
+
 
 export default function GoBack(props) {
 
@@ -13,9 +15,10 @@ export default function GoBack(props) {
               {props.message}
             </span>
       <br/>
-      <button onClick={() => goBack(props.url)}>
+      <button className={style.goButton} onClick={() => goBack(props.url)}>
         Click here to go to the search page
       </button>
+
     </div>
   )
 }
