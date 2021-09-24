@@ -10,6 +10,11 @@ export default function GoBack(props) {
   }
 
   return (
+    <>
+      <title>
+        Not found
+        <meta name={"theme-color"} content={"#15202B"}/>
+      </title>
     <CenteredColumnSection>
             <span>
               {props.message}
@@ -20,5 +25,7 @@ export default function GoBack(props) {
       </GoButton>
 
     </CenteredColumnSection>
+    </>
+
   )
 }

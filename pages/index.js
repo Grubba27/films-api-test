@@ -14,8 +14,10 @@ export default function Home() {
     redirectOnInit();
   })
   return (<>
+
     <title>
       Movie Searcher
+      <meta name={"theme-color"} content={"#15202B"}/>
     </title>
       <GoBack message={'If something has not happened click'} url={'/filmes'} />
     </>
