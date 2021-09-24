@@ -13,7 +13,7 @@ export async function getServerSideProps({query}) {
   const response = await axios(
     {
       method: 'get',
-      url: `https://www.omdbapi.com/?t=${NomeDoFilme}&apikey=${apiKey}`
+      url: `https://www.omdbapi.com/?t=${NomeDoFilme}&apikey=${apiKey}&plot=full`
     }
   );
   const filmResult = response.data
@@ -36,12 +36,6 @@ export async function getServerSideProps({query}) {
 export default function NomeDoFilme({filmResult}) {
 
   const [siteRatings, setSiteRatings] = useState(filmResult.Ratings);
-
-  useEffect(() => {
-    console.log(filmResult)
-    console.log(siteRatings);
-  }, [filmResult]);
-
 
   return (
     <>

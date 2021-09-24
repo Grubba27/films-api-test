@@ -14,10 +14,10 @@ export default function MainMovieSection({filmResult, siteRatings}) {
       <GoBack message={'Not what you wanted ?'} url={'/filmes'}/>
       <FilmBanner title={filmResult.Title} posterUrl={filmResult.Poster}>
         <GenericData genericDataName={'Genres'} genericData={filmResult.Genre} />
-        <GenericData genericDataName={'Actors'} genericData={filmResult.Actors} />
         <FilmSynopsis Title={filmResult.Title} Plot={filmResult.Plot} />
+        <GenericData genericDataName={'Actors'} genericData={filmResult.Actors} />
+        <FilmSpec filmResult={filmResult} siteRatings={siteRatings} />
       </FilmBanner>
-      <FilmSpec filmResult={filmResult} siteRatings={siteRatings} />
     </main>
   )
 }

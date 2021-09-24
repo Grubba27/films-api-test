@@ -1,13 +1,13 @@
 import style from "../../styles/Movie.module.css"
 
 export default function OtherRatings(props) {
-  return(
+  return (
     <ul className={style.otherSitesList}>
       {
         props.ratings.map((rating, index) => {
           return (
             <li key={rating.Source}>
-              {rating.Source} {rating.Value}
+              {rating.Source} <b> {rating.Value}</b>
             </li>
           );
         })
