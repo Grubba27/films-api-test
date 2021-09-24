@@ -1,4 +1,3 @@
-import secrets from '../../../secrets.json';
 import axios from "axios";
 import {useEffect, useState} from "react";
 import GoBack from "../../public/components/GoBack";
@@ -8,7 +7,7 @@ export async function getServerSideProps({query}) {
   // get id of the url || pegar o nome do filme via url
   const {NomeDoFilme} = query;
   // get API key from env || usar as keys que estão no arquivo secrets.json
-  const apiKey = secrets.API_KEY;
+  const apiKey = "a1a8052a";
 
   const response = await axios(
     {
