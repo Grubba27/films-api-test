@@ -1,6 +1,8 @@
+import style from "../../styles/Movie.module.css"
+
 export default function OtherRatings(props) {
   return(
-    <ul>
+    <ul className={style.otherSitesList}>
       {
         props.ratings.map((rating, index) => {
           return (

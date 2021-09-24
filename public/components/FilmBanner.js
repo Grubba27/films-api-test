@@ -12,6 +12,7 @@ export default function FilmBanner(props){
       </h2>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img alt={`${props.title} poster`} src={props.posterUrl}/>
+      {props.children}
     </>
   )
 }
