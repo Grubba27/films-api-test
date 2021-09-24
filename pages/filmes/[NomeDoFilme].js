@@ -40,7 +40,7 @@ export default function NomeDoFilme({filmResult}) {
   return (
     <>
       {
-        filmResult.Error === true ?
+        filmResult.Error  ?
           <GoBack message={filmResult.Error} url={'/filmes'}/>
           :
           <MovieNameResult filmResult={filmResult} siteRatings={siteRatings} />
