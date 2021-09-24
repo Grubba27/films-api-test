@@ -2,7 +2,9 @@
 import {useRouter} from "next/router";
 import {useEffect} from "react";
 import GoBack from "../public/components/GoBack";
+import styled from "@emotion/styled";
 
+export const SimpleTitle = styled.title``;
 export default function Home() {
   const router = useRouter()
 
@@ -13,9 +15,9 @@ export default function Home() {
     redirectOnInit();
   })
   return (<>
-    <title>
+    <SimpleTitle>
       Movie Searcher
-    </title>
+    </SimpleTitle>
       <GoBack message={'If something has not happened click'} url={'/filmes'} />
     </>
   )
